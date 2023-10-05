@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Positive or Negative</title>
+		<link href="postive.css" rel="stylesheet"/>
+    </head>
+    <body>
+		<div class="container">
+			<h2>POSITIVE OR NEGATIVE</h2>
+			<br/>
+			<br/>
+			<label for="num">ENTER A NUMBER</label>
+			<br/>
+			<br/>
+			<input type="number" id="num" value="0"/>
+			<br/>
+			<br/>
+			<br/>
+			<button onclick="check()">CHECK</button>
+			<br/>
+			<br/>
+			<h3 id="result"></h3>
+			<br/>
+			<br/>
+			<a href="index.html" class="back">BACK TO MAIN MENU</a>
+			<script>
+				function check()
+				{
+					var num = parseFloat(document.getElementById("num").value) || 0;
+					if (num > 0)
+					{
+						document.getElementById("result").innerHTML = num + " IS POSITIVE.";
+					}
+					else if (num < 0)
+					{
+						document.getElementById("result").innerHTML = num + " IS NEGATIVE.";
+					}
+					else
+					{
+						document.getElementById("result").innerHTML = "ZERO!";
+					}
+				}
+			</script>
+		</div>
+    </body>
+</html>
